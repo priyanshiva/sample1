@@ -1,0 +1,65 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "http://localhost:8085"
+basePath: ""
+paths:
+  /state/add:
+    post:
+      operationId: "add"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Request body"
+        required: true
+      responses:
+        200: {}
+  /state/delete/{code}:
+    delete:
+      operationId: "{code}"
+      consumes:
+      - "application/json"
+      parameters:
+      - name: "code"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200: {}
+  /state/list:
+    get:
+      operationId: "List"
+      parameters: []
+      responses:
+        0: {}
+        404: {}
+        200: {}
+  /state/show/{code}:
+    get:
+      operationId: "{code}"
+      parameters:
+      - name: "code"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200: {}
+  /state/update/{code}:
+    put:
+      operationId: "{code}"
+      consumes:
+      - "application/json"
+      parameters:
+      - name: "code"
+        in: "path"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Request body"
+        required: true
+      responses:
+        200: {}
